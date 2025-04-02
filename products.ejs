@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>المنتجات</title>
+</head>
+<body>
+  <h1>قائمة المنتجات</h1>
+  <ul>
+    <% products.forEach(product => { %>
+      <li><%= product.name %> - <%= product.price %> ريال</li>
+    <% }); %>
+  </ul>
+  <a href="/">الرجوع</a>
+</body>
+</html>

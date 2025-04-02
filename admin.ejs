@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم</title>
+</head>
+<body>
+  <h1>إدارة المنتجات</h1>
+  <ul>
+    <% products.forEach(product => { %>
+      <li>
+        <%= product.name %> - <%= product.price %> ريال
+        <form action="/admin/delete/<%= product._id %>" method="POST">
+          <button type="submit">❌ حذف</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/">الرجوع</a>
+</body>
+</html>
